@@ -1,12 +1,16 @@
 require 'simplecov'
+require 'coveralls'
 require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'
 
 # Configure code coverage reporting
+SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
+
 SimpleCov.start do
-  add_filter '/spec/'
+  add_filter '/spec'
   coverage_dir 'docs/coverage'
+  minimum_coverage(95.0)
 end
 
 # Load our env and service
