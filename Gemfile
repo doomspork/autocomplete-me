@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'geohash', github: 'davetroy/geohash'
 gem 'rack'
 gem 'rack-cors', require: 'rack/cors'
 gem 'redis'
