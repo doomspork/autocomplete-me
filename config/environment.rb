@@ -7,7 +7,7 @@ ENV['RACK_ENV'] ||= 'development'
 Bundler.require(:default, ENV['RACK_ENV'])
 Dotenv.load(*%W(.env .env.#{ENV['RACK_ENV']}))
 
-module GeoAutocomplete
+module Geocomplete
   extend self
 
   class Config < Struct.new(:logger, :redis)
@@ -20,15 +20,18 @@ module GeoAutocomplete
   end
 end
 
-redis_config = {
-  driver: :hiredis,
-  logger: Logger.new(STDOUT)
-}
-redis_config[:url]  = ENV['REDIS_URL']  if ENV['REDIS_URL']
-redis_config[:path] = ENV['REDIS_PATH'] if ENV['REDIS_PATH']
+def config
+  redis_config = {
+    driver: :hiredis,
+    logger: Logger.new(STDOUT)
+  }
+  redis_config[:url]  = ENV['REDIS_URL']  if ENV['REDIS_URL']
+  redis_config[:path] = ENV['REDIS_PATH'] if ENV['REDIS_PATH']
+  redis_config
+end
 
-GeoAutocomplete.config do |c|
+Geocomplete.config do |c|
   c.logger       ||= Logger.new(STDOUT)
   c.logger.level   = ENV['LOG_LEVEL'] || Logger::INFO
-  c.redis        ||= Redis.new(redis_config)
+  c.redis        ||= Redis.new(config)
 end

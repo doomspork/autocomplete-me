@@ -4,6 +4,7 @@ gem 'rack'
 gem 'rack-cors', require: 'rack/cors'
 gem 'redis'
 gem 'hiredis' # Load after Redis
+gem 'thor'
 gem 'unicorn'
 
 group :production do

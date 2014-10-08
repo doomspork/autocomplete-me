@@ -112,4 +112,5 @@ DEPENDENCIES
   rspec
   rspec-its
   simplecov
+  thor
   unicorn
