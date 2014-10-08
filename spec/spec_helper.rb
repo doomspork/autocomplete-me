@@ -17,7 +17,7 @@ end
 require_relative '../config/environment'
 require_relative '../service'
 
-GeoAutocomplete.config { |c| c.redis = MockRedis.new }
+Geocomplete.config { |c| c.redis = MockRedis.new }
 
 # Load spec helpers and support classes
 Dir['./spec/support/**/*.rb'].each { |f| require f }
@@ -32,6 +32,6 @@ RSpec.configure do |config|
   config.mock_framework = :rr
 
   def app
-    GeoAutocomplete::Service.new
+    Geocomplete::Service.new
   end
 end

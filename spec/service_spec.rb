@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-module GeoAutocomplete
+module Geocomplete
   describe Service do
-    let(:redis) { GeoAutocomplete.config.redis }
+    let(:redis) { Geocomplete.config.redis }
 
     describe 'GET /' do
       before do

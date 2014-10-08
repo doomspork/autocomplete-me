@@ -14,4 +14,4 @@ use Rack::Cors do
   end
 end
 
-run GeoAutocomplete::Service
+run Geocomplete::Service

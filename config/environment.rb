@@ -7,7 +7,7 @@ ENV['RACK_ENV'] ||= 'development'
 Bundler.require(:default, ENV['RACK_ENV'])
 Dotenv.load(*%W(.env .env.#{ENV['RACK_ENV']}))
 
-module GeoAutocomplete
+module Geocomplete
   extend self
 
   class Config < Struct.new(:logger, :redis)
@@ -30,7 +30,7 @@ def config
   redis_config
 end
 
-GeoAutocomplete.config do |c|
+Geocomplete.config do |c|
   c.logger       ||= Logger.new(STDOUT)
   c.logger.level   = ENV['LOG_LEVEL'] || Logger::INFO
   c.redis        ||= Redis.new(config)

@@ -1,5 +1,5 @@
 # :nocov:
-unless defined?(GeoAutocomplete)
+unless defined?(Geocomplete)
   require File.expand_path('config/environment')
 end
 # :nocov:
@@ -18,7 +18,7 @@ class Warmup < Thor
   private
 
   def redis
-    @redis ||= GeoAutocomplete.config.redis
+    @redis ||= Geocomplete.config.redis
   end
 
   def prepare_data(contents)
