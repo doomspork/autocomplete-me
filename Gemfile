@@ -12,9 +12,10 @@ group :production do
 end
 
 group :development, :test do
-  gem 'foreman'
   gem 'dotenv'
+  gem 'foreman'
   gem 'icepick'
+  gem 'rubyzip'
 end
 
 group :test do

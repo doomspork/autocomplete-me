@@ -2,11 +2,11 @@
   "Oak City, UT": {
     "country": "United States",
     "state": "Utah",
-    "country": "Millard"
+    "county": "Millard"
   },
   "Oakland, CA": {
     "country": "United States",
     "state": "California",
-    "country": "Alameda"
+    "county": "Alameda"
   }
 }

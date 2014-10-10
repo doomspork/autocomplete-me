@@ -5,8 +5,6 @@ $stdout.sync = true
 require_relative 'config/environment'
 require_relative 'service'
 
-set :run, false
-
 use Rack::Cors do
   allow do
     origins '*'
@@ -14,4 +12,4 @@ use Rack::Cors do
   end
 end
 
-run Geocomplete::Service
+run Geocomplete::Service.new

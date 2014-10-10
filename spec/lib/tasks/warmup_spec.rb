@@ -8,17 +8,9 @@ describe Warmup do
   before { Warmup.new.start(file_path) }
 
   context 'content creation' do
-    subject { redis.get('contents:0') }
+    subject { JSON.parse(redis.get('content:0')) }
 
-    let(:json) do
-      {
-        country: 'United States',
-        state: 'Utah',
-        country: 'Millard'
-      }.to_json
-    end
-
-    it { is_expected.to eq json }
+    it { is_expected.to include 'country' => 'United States', 'state' => 'Utah', 'county' => 'Millard' }
   end
 
   context 'index creation' do
