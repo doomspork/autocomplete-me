@@ -1,11 +1,7 @@
-# :nocov:
-unless defined?(Geocomplete)
-  require File.expand_path('config/environment')
-end
-# :nocov:
+require File.expand_path('config/environment') unless defined?(Geocomplete)
 
 class Warmup < Thor
-  desc 'run FILE', 'Warmup Redis and build indexes from FILE'
+  desc 'start FILE', 'Warmup Redis and build indexes from FILE'
   def start(file)
     File.open(file, 'rb') do |file|
       json = JSON.parse(file.read)
@@ -29,7 +25,7 @@ class Warmup < Thor
   end
 
   def store(contents)
-    contents.each { |(i, k, v)| redis.set("contents:#{i}", v) }
+    contents.each { |(i, k, v)| redis.set("content:#{i}", v) }
   end
 
   def index(contents)
