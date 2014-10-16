@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rack-cors'
   s.add_runtime_dependency 'redis'
   s.add_runtime_dependency 'hiredis'
-  s.add_runtime_dependency 'unicorn'
 end
