@@ -5,6 +5,7 @@ group :development, :test do
   gem 'dotenv'
   gem 'rubyzip'
   gem 'thor'
+  gem 'unicorn'
 end
 
 group :test do

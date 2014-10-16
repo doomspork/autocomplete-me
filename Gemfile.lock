@@ -6,7 +6,6 @@ PATH
       rack
       rack-cors
       redis
-      unicorn
 
 GEM
   remote: https://rubygems.org/
@@ -120,3 +119,4 @@ DEPENDENCIES
   rubyzip
   simplecov
   thor
+  unicorn
