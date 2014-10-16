@@ -1,9 +1,11 @@
-require 'logger'
+require 'rack/cors'
+
+ENV['RACK_ENV'] ||= 'development'
 
 $stdout.sync = true
 
-require_relative 'config/environment'
-require_relative 'service'
+require 'geocomplete'
+require 'geocomplete/initializer'
 
 use Rack::Cors do
   allow do

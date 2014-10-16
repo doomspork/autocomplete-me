@@ -1,8 +1,9 @@
-require 'simplecov'
-require 'coveralls'
-require 'rack/test'
-
 ENV['RACK_ENV'] = 'test'
+
+require 'coveralls'
+require 'simplecov'
+
+require 'geocomplete'
 
 # Configure code coverage reporting
 SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
@@ -12,10 +13,6 @@ SimpleCov.start do
   coverage_dir 'docs/coverage'
   minimum_coverage(95.0)
 end
-
-# Load our env and service
-require_relative '../config/environment'
-require_relative '../service'
 
 Geocomplete.config { |c| c.redis = MockRedis.new }
 

@@ -18,17 +18,17 @@ There are two tasks included for the purpose of downloading and parsing populate
 
 To download and extract the latest `AllStatesFedCodes` file:
 
-+ `usgs:download`
++ `bundle exec thor usgs:download`
 
 Next we need to parse the individual `StateFedCodes` into a single JSON file which will be used to the warm-up the cache, by default this will create a `places.json` file:
 
-+ `usgs:parse`
++ `bundle exec thor usgs:parse`
 
 ## Warm-up
 
 On occassion it may be necessary to warm-up Redis by populating it with both content and indexes.  There is a task included to make this process easier by parsing a JSON file:
 
-+ `warm:start JSON_FILE`
++ `bundle exec thor warm:start JSON_FILE`
 
 ## Testing
 

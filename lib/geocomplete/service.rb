@@ -26,6 +26,5 @@ module Geocomplete
     def redis
       @redis ||= Geocomplete.config.redis
     end
-
   end
 end

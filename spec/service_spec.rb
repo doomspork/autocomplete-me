@@ -18,7 +18,7 @@ module Geocomplete
       end
 
       it 'will return a collection' do
-        get '/', t: 'oakland'
+        get '/', t: 'oak'
         expect(last_response.status).to eq 200
         expect(response).to include 'country' => 'United States', 'state' => 'Utah', 'county' => 'Millard'
       end

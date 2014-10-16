@@ -1,4 +1,5 @@
-require File.expand_path('config/environment') unless defined?(Geocomplete)
+require 'thor'
+require File.expand_path('lib/geocomplete') unless defined?(Geocomplete)
 
 class Warmup < Thor
   desc 'start FILE', 'Warmup Redis and build indexes from FILE'
