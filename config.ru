@@ -14,4 +14,4 @@ use Rack::Cors do
   end
 end
 
-run Geocomplete::Service.new
+run Geocomplete::Service
