@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'foreman'
   gem 'dotenv'
   gem 'rubyzip'
   gem 'thor'
-  gem 'unicorn'
 end
 
 group :test do

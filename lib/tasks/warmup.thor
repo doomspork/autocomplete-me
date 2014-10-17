@@ -1,6 +1,5 @@
 require 'thor'
-require File.expand_path('lib/geocomplete') 
-require File.expand_path('lib/geocomplete/initializer') 
+require File.expand_path('lib/autocomplete-me') 
 
 class Warmup < Thor
   desc 'start FILE', 'Warmup Redis and build indexes from FILE'
@@ -16,7 +15,7 @@ class Warmup < Thor
   private
 
   def redis
-    @redis ||= Geocomplete.config.redis
+    @redis ||= AutocompleteMe.config.redis
   end
 
   def prepare_data(contents)

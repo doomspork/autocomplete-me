@@ -1,8 +1,8 @@
-require 'geocomplete/config'
-require 'geocomplete/environment'
-require 'geocomplete/service'
+require 'autocomplete-me/config'
+require 'autocomplete-me/environment'
+require 'autocomplete-me/service'
 
-module Geocomplete
+module AutocompleteMe
   extend self
 
   def config

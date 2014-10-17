@@ -3,7 +3,7 @@ load File.expand_path('lib/tasks/warmup.thor')
 
 describe Warmup do
   let(:file_path) { File.expand_path('spec/fixtures/places.json') }
-  let(:redis)     { Geocomplete.config.redis }
+  let(:redis)     { AutocompleteMe.config.redis }
 
   before { Warmup.new.start(file_path) }
 
