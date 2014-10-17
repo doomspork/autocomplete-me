@@ -6,12 +6,13 @@ Gem::Specification.new do |s|
   s.version       = AutocompleteMe::VERSION 
   s.summary       = 'A simple and blazing fast micro-service for powering autocompletion.'
   s.description   = 'AutocompleteMe is a mountable Rack based micro-service for powering autocompletion functionality similar to Google Places Autocomplete'
-  s.authors       = ['doomspork']
+  s.authors       = %w(doomspork)
   s.email         = 'seancallan@gmail.com'
-  s.files         = ['lib/autocomplete-me.rb', 'LICENSE']
+  s.files         = %w(lib/autocomplete-me.rb LICENSE)
   s.homepage      = 'https://github.com/doomspork/autocomplete-me'
   s.license       = 'MIT'
-  s.require_paths = ['lib']
+  s.require_paths = %w(lib)
+  s.executables   = %w(usgs warmup)
 
   s.required_ruby_version = '>= 1.9.3'
 

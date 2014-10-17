@@ -1,6 +1,3 @@
-require 'thor'
-require File.expand_path('lib/autocomplete-me') 
-
 class Warmup < Thor
   desc 'start FILE', 'Warmup Redis and build indexes from FILE'
   def start(file)
