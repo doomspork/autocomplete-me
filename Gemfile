@@ -11,7 +11,6 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'mock_redis'
-  gem 'icepick'
   gem 'rack-test'
   gem 'rr'
   gem 'rspec'

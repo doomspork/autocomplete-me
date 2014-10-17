@@ -13,10 +13,11 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.require_paths = ['lib']
 
-  s.required_ruby_version = '> 2.0'
+  s.required_ruby_version = '>= 1.9.3'
 
-  s.add_runtime_dependency 'rack', '~> 1.5'
-  s.add_runtime_dependency 'rack-cors', '~> 0.2'
-  s.add_runtime_dependency 'redis', '~> 3.1'
-  s.add_runtime_dependency 'hiredis', '~> 0.5'
+  s.add_runtime_dependency 'rack',       '~> 1.5'
+  s.add_runtime_dependency 'rack-cors',  '~> 0.2'
+  s.add_runtime_dependency 'redis',      '~> 3.1'
+  s.add_runtime_dependency 'hiredis',    '~> 0.5'
+  s.add_runtime_dependency 'thor',       '~> 0.19'
 end

@@ -1,5 +1,6 @@
 require 'thor'
-require File.expand_path('lib/geocomplete') unless defined?(Geocomplete)
+require File.expand_path('lib/geocomplete') 
+require File.expand_path('lib/geocomplete/initializer') 
 
 class Warmup < Thor
   desc 'start FILE', 'Warmup Redis and build indexes from FILE'

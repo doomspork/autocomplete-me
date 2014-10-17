@@ -1,3 +1,5 @@
+Dotenv.load(*%W(.env .env.#{ENV['RACK_ENV']}))
+
 module Geocomplete
   def redis_options
     unless @redis_options
