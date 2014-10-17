@@ -2,7 +2,7 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'geocomplete/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'Geocomplete'
+  s.name          = 'geocomplete'
   s.version       = Geocomplete::VERSION 
   s.summary       = 'A simple and blazing fast micro-service for powering geographical places autocomplete.'
   s.description   = 'Geocomplete is a Rack based micro-service for powering a geograhical places autocomplete similar to Google Places Autocomplete.'
