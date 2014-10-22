@@ -3,7 +3,7 @@ ENV['RACK_ENV'] = 'test'
 require 'coveralls'
 require 'simplecov'
 
-require 'geocomplete'
+require 'autocomplete-me'
 
 # Configure code coverage reporting
 SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
@@ -14,7 +14,7 @@ SimpleCov.start do
   minimum_coverage(95.0)
 end
 
-Geocomplete.config { |c| c.redis = MockRedis.new }
+AutocompleteMe.config { |c| c.redis = MockRedis.new }
 
 # Load spec helpers and support classes
 Dir['./spec/support/**/*.rb'].each { |f| require f }
@@ -29,6 +29,6 @@ RSpec.configure do |config|
   config.mock_framework = :rr
 
   def app
-    Geocomplete::Service.new
+    AutocompleteMe::Service.new
   end
 end

@@ -1,6 +1,6 @@
 require 'csv'
+require 'json'
 require 'net/http'
-require 'thor'
 require 'uri'
 require 'zip'
 

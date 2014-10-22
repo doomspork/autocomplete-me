@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'thor'
+
+load File.join(File.dirname(__FILE__), '..', 'lib', 'tasks', 'warmup.thor')
+
+Warmup.start

@@ -1,4 +1,4 @@
-module Geocomplete
+module AutocompleteMe
   class Service
 
     def call(env)
@@ -24,7 +24,7 @@ module Geocomplete
     end
 
     def redis
-      @redis ||= Geocomplete.config.redis
+      @redis ||= AutocompleteMe.config.redis
     end
   end
 end
