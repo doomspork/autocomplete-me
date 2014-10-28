@@ -4,7 +4,7 @@ A simple and blazing fast micro-service for powering autocompletion.
 
 AutocompleteMe exists because I wanted to create a micro-service that would allow me to replace [Google Places Autocomplete](https://developers.google.com/places/documentation/autocomplete) on [CityLeash](http://www.cityleash.com).  I decided to build it with Rack and package it as a gem so it could be mounted easily within another application (e.g. Rails Engine).
 
-[![Build Status](https://travis-ci.org/doomspork/autocomplete-me?branch=master)](https://travis-ci.org/doomspork/autocomplete-me) [![Code Climate](https://codeclimate.com/github/doomspork/autocomplete-me)](https://codeclimate.com/github/doomspork/autocomplete-me) [![Coverage Status](https://coveralls.io/repos/doomspork/autocomplete-me/badge.png)](https://coveralls.io/r/doomspork/autocomplete-me) [![Dependency Status](https://gemnasium.com/doomspork/autocomplete-me)](https://gemnasium.com/doomspork/autocomplete-me)
+[![Build Status](https://travis-ci.org/doomspork/autocomplete-me.svg?branch=master)](https://travis-ci.org/doomspork/autocomplete-me) [![Code Climate](https://codeclimate.com/github/doomspork/autocomplete-me/badges/gpa.svg)](https://codeclimate.com/github/doomspork/autocomplete-me) [![Coverage Status](https://coveralls.io/repos/doomspork/autocomplete-me/badge.png)](https://coveralls.io/r/doomspork/autocomplete-me) [![Dependency Status](https://gemnasium.com/doomspork/autocomplete-me.svg)](https://gemnasium.com/doomspork/autocomplete-me)
 
 ## Table of Contents
   1. [Getting Started](#gettingstarted)
